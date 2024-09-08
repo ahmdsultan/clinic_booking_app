@@ -1,7 +1,4 @@
-import 'package:clinic_booking_app/constants/colors.dart';
 import 'package:clinic_booking_app/screens/signin_screen.dart';
-import 'package:clinic_booking_app/widgets/button.dart';
-import 'package:clinic_booking_app/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 void main() {
