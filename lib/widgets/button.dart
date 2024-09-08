@@ -7,7 +7,8 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Expanded(
+      child: SizedBox( // I change the Widget type from Expanded to Size box with add [width :double.infinity ] to Make it full width if needed
+        width: double.infinity, 
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
