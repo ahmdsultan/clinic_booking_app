@@ -1,6 +1,5 @@
 import 'package:clinic_booking_app/constants/colors.dart';
 import 'package:flutter/material.dart';
-
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({super.key, required this.text});
   final String text;

@@ -1,8 +1,5 @@
 import 'package:clinic_booking_app/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:clinic_booking_app/constants/colors.dart';
-
 class CustomTextField extends StatefulWidget {
   // Change the State to State Full Widget to Handle the Situation if the Text 
   //Field is Password show Eye Icon to Hide or show the Password
