@@ -1,7 +1,13 @@
-import 'package:clinic_booking_app/screens/signin_screen.dart';
+import 'package:clinic_booking_app/ui/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MainApp());
 }
 
@@ -11,7 +17,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SigninScreen());
+        debugShowCheckedModeBanner: false, home: SigninScreen());
   }
 }
