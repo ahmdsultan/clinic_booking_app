@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 import '../widgets/button.dart';
 import '../widgets/custom_text_field.dart';
+import '../widgets/custombutton.dart';
 
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
@@ -39,9 +40,24 @@ class SigninScreen extends StatelessWidget {
               SizedBox(
                 height: height,
               ),
-              const ButtonWidget(
-                text: 'Sign In',
+              CustomButton(
+                // عند استدعاء الكلاس نقوم بتمرير المتغيرات كالتالي
+                text: 'Sign In ', //النص الذي سوف يظهر على الزر
+
+                onPressed: () {
+                  //الاكشن الذي سوف يقوم به الزر
+                  //هنا يتم اضافة الاكشن المحدد عند الضغط على الزر
+                  //مثل استدعاء دالة الانتقالة لصفحة وهكذا
+                },
+                buttonType: ButtonType.elevated,//نوع الزر الذي تريدونه تستدعونه بهذه الطريقة 
+                //هناك المزيد من الميزات يمكنكم التعديل عليها كما تريدون 
               ),
+              CustomButton(
+                textColor: Colors.black,
+                onPressed: () {},
+                text: 'Don\'t have an account? Register',
+                buttonType: ButtonType.text,
+              )
             ],
           ),
         ),
