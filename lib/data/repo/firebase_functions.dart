@@ -38,23 +38,4 @@ class FirebaseFunctions {
     }
     return '';
   }
-
-  addUserData({
-    required String firstName,
-    required String lastName,
-    required int day,
-    required int month,
-    required int year,
-  }) {
-    final user = <String, dynamic>{
-      "first_name": firstName,
-      "last_name": lastName,
-      "day": day,
-      "month": month,
-      "year": year,
-    };
-
-// Add a new document with a generated ID
-    db.collection("users").add(user);
-  }
 }
