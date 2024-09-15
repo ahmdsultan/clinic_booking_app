@@ -1,12 +1,11 @@
-import 'dart:js_interop';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseFunctions {
   FirebaseFirestore db = FirebaseFirestore.instance;
 
-  Future<String> createNewUser(String emailAddress, String password) async {
+  Future<String> createNewUser(
+      {required String emailAddress, required String password}) async {
     try {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailAddress,
@@ -25,7 +24,8 @@ class FirebaseFunctions {
     return '';
   }
 
-  Future<String> signinUser(String emailAddress, String password) async {
+  Future<String> signinUser(
+      {required String emailAddress, required String password}) async {
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: emailAddress, password: password);
@@ -56,14 +56,5 @@ class FirebaseFunctions {
 
 // Add a new document with a generated ID
     db.collection("users").add(user);
-  }
-
-  getUsersData() async {
-    List<QueryDocumentSnapshot<Map<String, dynamic>>> data = [];
-    await db.collection("users").get().then((event) {
-      for (var doc in event.docs) {
-        data.add(doc);
-      }
-    });
   }
 }
